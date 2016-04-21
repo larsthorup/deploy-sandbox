@@ -1,0 +1,25 @@
+{
+  "name": "node-deploy-sandbox",
+  "version": "0.1.0",
+  "description": "Node deployment automation - sandbox",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node src/main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larsthorup/node-deploy-sandbox.git"
+  },
+  "author": "Lars Thorup <lars@zealake.com> (http://github.com/larsthorup)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larsthorup/node-deploy-sandbox/issues"
+  },
+  "homepage": "https://github.com/larsthorup/node-deploy-sandbox#readme",
+  "dependencies": {
+    "knex": "^0.10.0",
+    "pg": "^4.5.3",
+    "restify": "^4.0.4"
+  }
+}
