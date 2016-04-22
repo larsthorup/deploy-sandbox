@@ -1,0 +1,20 @@
+{
+  "production": {
+    "keySource": "file",
+    "keySourceEncoding": "base64",
+    "keySourceOpts": {
+      "path": "cryptex.key"
+    },
+    "secrets": {
+      "postgresql_connection_string": "VP+8DPei85gFCi2MjqHrEX9GZQE009xvGUbVECEoj/p6ps7QzvI4EGqQYufR9zN1n9Z24LRo31JCeQzM4H0x1ap7QAu0f+9bkBVnpJfIhOlbcQa/b61VuvcKSVtDdyiMRpNuW7ex3GAocqJF6N3rfg=="
+    }
+  },
+  "default": {
+    "keySource": "none",
+    "algorithm": "plaintext",
+    "secretEncoding": "utf8",
+    "secrets": {
+      "postgresql_connection_string": "postgres://postgres:postgres@localhost:5432/lars"
+    }
+  }
+}

@@ -1,10 +1,8 @@
+var cryptex = require('cryptex');
 var restify = require('restify');
 var Knex = require('knex');
 
-var knex = Knex({
-  client: 'pg',
-  connection: process.env.POSTGRESQL_CONNECTION_STRING || 'postgres://postgres:postgres@localhost:5432/lars',
-});
+var knex;
 
 function userHandler (req, res, next) {
   knex('user').count('* as userCount').then(function (result) {
@@ -20,7 +18,16 @@ function userHandler (req, res, next) {
   });
 }
 
-function serving () {
+function configuring () {
+  return cryptex.getSecret('postgresql_connection_string').then(function (postgresql_connection_string) {
+    knex = Knex({
+      client: 'pg',
+      connection: postgresql_connection_string,
+    });
+  });
+}
+
+function listening () {
   return new Promise(function (resolve) {
     // ToDo: verify db schema version
     var server = restify.createServer();
@@ -29,6 +36,12 @@ function serving () {
     server.listen(process.env.PORT || 1719, function () {
       resolve(server);
     });
+  });
+}
+
+function serving () {
+  return configuring().then(function () {
+    return listening();
   });
 }
 

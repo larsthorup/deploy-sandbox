@@ -12,30 +12,34 @@ ToDo:
 * decrypt config
 * Smoke test
 
-
-General environment variables
-----
-
-* `POSTGRESQL_CONNECTION_STRING` refers to a running Postgresql database with schema from [postgresql-deploy-sandbox](github.com/larsthorup/postgresql-deploy-sandbox)
-* `PORT` is where the service will listen for requests
-
-Local
+Prerequisites
 ----
 
     npm install
+
+
+Local development
+----
+
     npm start
-    http://localhost:PORT/users
+    http://localhost:1719/users
+
+
+Production
+----
+
+Environment variable
+
+* `PASSPHRASE`: your single secret deployment passphrase
+* `CRYPTEX_ENV`: `production`
+
+    npm run cryptex:key
+    npm start
+    http://localhost:1719/users
+
 
 Modulus
 ----
 
-Environment variables in addition to the general variables mentioned above
-
-* `MODULUS_USERNAME`
-* `MODULUS_PASSWORD`
-* `MODULUS_PROJECT_NAME`
-
-
     npm run modulus:deploy
 
-    
