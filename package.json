@@ -5,7 +5,8 @@
   "main": "src/main.js",
   "scripts": {
     "test": "mocha",
-    "start": "node src/main"
+    "start": "node src/main",
+    "modulus:deploy": "node scripts/modulus/deploy"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,11 @@
     "knex": "^0.10.0",
     "pg": "^4.5.3",
     "restify": "^4.0.4"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  },
+  "devDependencies": {
+    "modulus": "^5.0.1"
   }
 }

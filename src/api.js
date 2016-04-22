@@ -1,11 +1,12 @@
 var restify = require('restify');
 var Knex = require('knex');
 
+var knex = Knex({
+  client: 'pg',
+  connection: process.env.POSTGRESQL_CONNECTION_STRING || 'postgres://postgres:postgres@localhost:5432/lars',
+});
+
 function userHandler (req, res, next) {
-  var knex = Knex({
-    client: 'pg',
-    connection: process.env.POSTGRESQL_CONNECTION_STRING || 'postgres://postgres:postgres@localhost:5432/lars',
-  });
   knex('user').count('* as userCount').then(function (result) {
     if(result.length < 1) {
       return 0;
@@ -25,7 +26,7 @@ function serving () {
     var server = restify.createServer();
     server.pre(restify.CORS());
     server.get('/users', userHandler);
-    server.listen(1719, function () {
+    server.listen(process.env.PORT || 1719, function () {
       resolve(server);
     });
   });
