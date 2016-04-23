@@ -9,7 +9,6 @@ This repo showcases ways to deploy a node web service. Target platforms currentl
 ToDo:
 
 * Travis-CI
-* decrypt config
 * Smoke test
 
 Prerequisites
@@ -25,21 +24,29 @@ Local development
     http://localhost:1719/users
 
 
-Production
+Decrypting secrets
 ----
 
 Environment variable
 
-* `PASSPHRASE`: your single secret deployment passphrase
-* `CRYPTEX_ENV`: `production`
+* `PASSPHRASE`: your secret passphrase
 
     npm run cryptex:key
+
+
+Production
+----
+
+* `NODE_ENV`: `production`
+
     npm start
     http://localhost:1719/users
 
 
 Modulus
 ----
+
+* `NODE_ENV`: `production`
 
     npm run modulus:deploy
 

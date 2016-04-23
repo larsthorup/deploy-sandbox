@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "node src/main",
+    "cryptex:key": "node scripts/cryptex/key",
     "modulus:deploy": "node scripts/modulus/deploy"
   },
   "repository": {
