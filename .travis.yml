@@ -3,6 +3,7 @@ node_js:
   - "stable"
 deploy:
   provider: "script"
+  skip_cleanup: true
   script: "npm run travis:deploy"
   env:
     - NODE_ENV=production
