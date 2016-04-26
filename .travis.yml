@@ -6,4 +6,4 @@ env:
 deploy:
   provider: "script"
   skip_cleanup: true
-  script: "echo X$TESTING$X"
+  script: "npm run travis:deploy"

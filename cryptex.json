@@ -6,8 +6,8 @@
       "path": "cryptex.key"
     },
     "secrets": {
-      "postgresql_connection_string": "VP+8DPei85gFCi2MjqHrEX9GZQE009xvGUbVECEoj/p6ps7QzvI4EGqQYufR9zN1n9Z24LRo31JCeQzM4H0x1ap7QAu0f+9bkBVnpJfIhOlbcQa/b61VuvcKSVtDdyiMRpNuW7ex3GAocqJF6N3rfg==",
-      "modulus_token": "a9OCBVfKUzdI4k9Hvq5c8EXL79u9KnOCd9Ftfy+6Lpk+8nY+ITU9kQvd1/U78mMfjcQddbEAkfptGy+45nnCcA=="
+      "postgresql_connection_string": "A93nTlC96VNGqZUhbcX7MxZ2WuJKgLjHjrdjPoyIoPw86Pd9OjHi4CIJ4FKGIfa9ESQdur7SzdP4nZK/S+G1VBVbsiG12sgJ8JbYuRb2LBtrOlhqEsQXgk9DgeMMjpGWdTJOMDnMe3BhEpgeVCp2Jg==",
+      "modulus_token": "aVvDkIHspMUbkq2K/7aIbULBVv5Lrzn10a0JsyPq/fdf7cuZymv9/DX7QyRXzLrQbT8tIg/fXkLUbNjuVC/YTA=="
     }
   },
   "default": {
