@@ -1,9 +1,9 @@
 language: node_js
 node_js:
   - "stable"
+env:
+  - NODE_ENV=production
 deploy:
   provider: "script"
   skip_cleanup: true
   script: "npm run travis:deploy"
-  env:
-    - NODE_ENV=production
