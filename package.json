@@ -4,10 +4,10 @@
   "description": "Node deployment automation - sandbox",
   "main": "src/main.js",
   "scripts": {
-    "test": "mocha",
     "start": "node src/main",
     "cryptex:key": "node scripts/cryptex/key",
-    "modulus:deploy": "node scripts/modulus/deploy"
+    "modulus:deploy": "node scripts/modulus/deploy",
+    "travis:deploy": "npm run cryptex:key && npm run modulus:deploy"
   },
   "repository": {
     "type": "git",

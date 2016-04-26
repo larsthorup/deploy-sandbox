@@ -8,8 +8,13 @@ This repo showcases ways to deploy a node web service. Target platforms currentl
 
 ToDo:
 
-* Travis-CI
 * Smoke test
+* SSL (Let's encrypt?)
+* Outdated check: package.json/engines
+* Pure JavaScript check (no binary dependencies)
+* Deploy what was tested: no npm install on prod server
+* Rollback
+
 
 Prerequisites
 ----
@@ -31,6 +36,7 @@ Environment variable
 
 * `PASSPHRASE`: your secret passphrase
 
+
     npm run cryptex:key
 
 
@@ -38,6 +44,7 @@ Production
 ----
 
 * `NODE_ENV`: `production`
+
 
     npm start
     http://localhost:1719/users
@@ -48,5 +55,16 @@ Modulus
 
 * `NODE_ENV`: `production`
 
+
     npm run modulus:deploy
+
+
+Travis-CI
+----
+
+* `PASSPHRASE`: your secret passphrase
+* `NODE_ENV`: `production`
+
+
+    npm run travis:deploy
 
