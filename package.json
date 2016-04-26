@@ -22,13 +22,11 @@
   "dependencies": {
     "cryptex": "^0.6.1",
     "knex": "^0.10.0",
+    "modulus": "^5.0.1",
     "pg": "^4.5.3",
     "restify": "^4.0.4"
   },
   "engines": {
     "node": "^5.0.0"
-  },
-  "devDependencies": {
-    "modulus": "^5.0.1"
   }
 }
