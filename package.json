@@ -11,7 +11,7 @@
     "modulus:login": "modulus login",
     "modulus:token": "modulus token list",
     "modulus:stop": "modulus project stop --project-name lars1",
-    "travis:deploy": "npm run cryptex:key && npm migrate:latest && npm migrate:status && npm run modulus:deploy"
+    "travis:deploy": "npm run cryptex:key && npm run migrate:latest && npm run migrate:status && npm run modulus:deploy"
   },
   "repository": {
     "type": "git",
