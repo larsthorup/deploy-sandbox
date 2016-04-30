@@ -24,6 +24,7 @@
     "knex": "^0.10.0",
     "modulus": "^5.0.1",
     "pg": "^4.5.3",
+    "request-promise": "^3.0.0",
     "restify": "^4.0.4"
   },
   "engines": {

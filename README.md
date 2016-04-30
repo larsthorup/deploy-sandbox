@@ -8,7 +8,8 @@ This repo showcases ways to deploy a node web service. Target platforms currentl
 
 ToDo:
 
-* Smoke test
+* Shared secret lib, shared with postgres-deploy-sandbox
+* Fixed domain (pending reply from Modulus)
 * SSL (Let's encrypt?)
 * Outdated check: package.json/engines
 * Pure JavaScript check (no binary dependencies)
@@ -57,6 +58,9 @@ Modulus
 
 
     npm run modulus:deploy
+
+
+* Manually assign "lars4711.mod.biz" custom domain to the "lars1" project in the Modulus admin web UI
 
 
 Travis-CI
