@@ -5,11 +5,13 @@
   "scripts": {
     "cryptex:encrypt": "cryptex -e production encrypt",
     "cryptex:key": "node scripts/cryptex/key",
+    "migrate:status": "node node_modules/deploy-sandbox-schema/src/migrate status",
+    "migrate:latest": "node node_modules/deploy-sandbox-schema/src/migrate latest",
     "modulus:deploy": "node scripts/modulus/deploy",
     "modulus:login": "modulus login",
     "modulus:token": "modulus token list",
     "modulus:stop": "modulus project stop --project-name lars1",
-    "travis:deploy": "npm run cryptex:key && npm run modulus:deploy"
+    "travis:deploy": "npm run cryptex:key && npm migrate:latest && npm migrate:status && npm run modulus:deploy"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "homepage": "https://github.com/larsthorup/deploy-sandbox#readme",
   "dependencies": {
     "cryptex": "^0.6.1",
+    "deploy-sandbox-schema": "git://github.com/larsthorup/deploy-sandbox-schema.git",
     "deploy-sandbox-service": "git://github.com/larsthorup/deploy-sandbox-service.git",
     "modulus": "^5.0.1",
     "ncp": "^2.0.0",
