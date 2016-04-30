@@ -6,16 +6,8 @@
       "path": "cryptex.key"
     },
     "secrets": {
-      "postgresql_connection_string": "A93nTlC96VNGqZUhbcX7MxZ2WuJKgLjHjrdjPoyIoPw86Pd9OjHi4CIJ4FKGIfa9ESQdur7SzdP4nZK/S+G1VBVbsiG12sgJ8JbYuRb2LBtrOlhqEsQXgk9DgeMMjpGWdTJOMDnMe3BhEpgeVCp2Jg==",
-      "modulus_token": "aVvDkIHspMUbkq2K/7aIbULBVv5Lrzn10a0JsyPq/fdf7cuZymv9/DX7QyRXzLrQbT8tIg/fXkLUbNjuVC/YTA=="
-    }
-  },
-  "default": {
-    "keySource": "none",
-    "algorithm": "plaintext",
-    "secretEncoding": "utf8",
-    "secrets": {
-      "postgresql_connection_string": "postgres://postgres:postgres@localhost:5432/lars"
+      "postgresql_connection_string": "u50wej+aceJGIqs5KcOqJ6RRseXueIhYxx3YVnZOTZZNSqAUzJRCvkKaRKarJA3UMjfqfJ0UNOG9psnwkd6pYfqOA/UClReVynfNAXtQV8qR3jDyXLdaX9O5CXl9/0OqLOh03VVdiUJfdT8rE66/wA==",
+      "modulus_token": "0H5DBJXqkdb70tx7c2wRigTG+ZrHhm1KVuXuKi6qc47CnGNeM8W6YLYyJ5jxPDAWyiEv1cvWZZpy16+CtJI6GA=="
     }
   }
 }

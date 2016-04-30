@@ -23,7 +23,14 @@ cryptex.getSecret('modulus_token').then(function (token) {
   console.log('Deploying...');
   // ToDo: use spawn with stdio: inherit, see https://github.com/kentcdodds/cross-env/blob/master/src/index.js
   // ToDo: script: "echo yes | cryptex-env modulus_token modulus project deploy --project-name lars1"
-  return executing(`echo yes | modulus project deploy --project-name ${projectName}`);
+  var dist = 'node_modules/deploy-sandbox-service';
+  var commands = [
+    `ncp cryptex.json ${dist}/cryptex.json`,
+    `ncp cryptex.key ${dist}/cryptex.key`,
+    `cd ${dist}`,
+    `echo yes | modulus project deploy --project-name ${projectName}`
+  ].join(' && ');
+  return executing(commands);
 }).then(function (result) {
   console.log(result.stdout);
 

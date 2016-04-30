@@ -3,12 +3,10 @@ Node deployment automation - sandbox
 
 This repo showcases ways to deploy a node web service. Target platforms currently includes
 
-* Local developer box
 * Modulus 
 
 ToDo:
 
-* Shared secret lib, shared with postgres-deploy-sandbox
 * Fixed domain (pending reply from Modulus)
 * SSL (Let's encrypt?)
 * Outdated check: package.json/engines
@@ -16,42 +14,37 @@ ToDo:
 * Deploy what was tested: no npm install on prod server
 * Rollback
 
-
 Prerequisites
 ----
 
     npm install
 
-
-Local development
-----
-
-    npm start
-    http://localhost:1719/users
-
-
-Decrypting secrets
-----
-
-Environment variable
-
-* `PASSPHRASE`: your secret passphrase
-
-
+    # set PASSPHRASE environment variable to your secret passphrase
     npm run cryptex:key
 
 
-Production
+
+Encrypting secrets
 ----
 
-* `NODE_ENV`: `production`
+* Modulus signup 
+* Modulus API token generation
+* Modulus custom domain configuration ("lars4711.mod.biz")
+* PostgreSQL hosting, e.g. elephantsql.com
 
 
-    npm start
-    http://localhost:1719/users
+    npm run modulus login
+    # enter your modulus user name and password
+    
+    npm run modulus:token
+    npm run cryptex:encrypt -- <modulus-token>
+    # paste encrypted token into cryptex.json
+    
+    npm run cryptex:encrypt -- <postgresql-connection-string>
+    # paste encrypted token into cryptex.json
 
 
-Modulus
+Deploy
 ----
 
 * `NODE_ENV`: `production`
@@ -59,8 +52,6 @@ Modulus
 
     npm run modulus:deploy
 
-
-* Manually assign "lars4711.mod.biz" custom domain to the "lars1" project in the Modulus admin web UI
 
 
 Travis-CI
