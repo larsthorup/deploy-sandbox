@@ -5,6 +5,12 @@ var executing = require('../executing');
 
 var projectName = 'lars1';
 
+function sleep (ms) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, ms);
+  });
+}
+
 cryptex.getSecret('modulus_token').then(function (token) {
   process.env.MODULUS_TOKEN = token;
 
@@ -34,7 +40,11 @@ cryptex.getSecret('modulus_token').then(function (token) {
 }).then(function (result) {
   console.log(result.stdout);
 
-  return requesting({uri: 'http://lars4711.mod.bz/users', json: true});
+  return sleep(15000); // ToDo: check and retry instead to finish faster when possible
+}).then(function () {
+
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; // ToDo: use proper certificate instead of self-signed
+  return requesting({uri: 'https://lars4711.mod.bz/users', json: true});
 }).then(function (users) {
   assert(users.hasOwnProperty('count'), 'Missing count property in response: ' + JSON.stringify(users));
   console.log('Verified: ', users);

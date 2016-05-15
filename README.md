@@ -29,6 +29,7 @@ Encrypting secrets
 * Modulus signup 
 * Modulus API token generation
 * Modulus custom domain configuration ("lars4711.mod.biz")
+* Modulus SSL certificate upload
 * PostgreSQL hosting, e.g. elephantsql.com
 
 
