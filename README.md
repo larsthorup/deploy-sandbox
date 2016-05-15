@@ -7,7 +7,6 @@ This repo showcases ways to deploy a node web service. Target platforms currentl
 
 ToDo:
 
-* Fixed domain (pending reply from Modulus)
 * SSL (Let's encrypt?)
 * Outdated check: package.json/engines
 * Pure JavaScript check (no binary dependencies)
